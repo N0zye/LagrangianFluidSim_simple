@@ -17,11 +17,12 @@ A simple 2D Lagrangian fluid simulation using **C++**, **SFML**, and **Verlet in
 ## 🛠️ Build Instructions
 
 This project uses **CMake** and fetches **SFML** automatically via `FetchContent`.
+Ninja is required in order to build.
 
 ```bash
-git clone https://github.com/yourusername/fluid-sim.git
-cd fluid-sim
-cmake -B build
+git clone https://github.com/N0zye/LagrangianFluidSim_simple.git
+cd LagrangianFluidSim_simple
+cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
 cmake --build build
-./build/fluid_sim
+./build/bin/Fluids.exe
 ```
