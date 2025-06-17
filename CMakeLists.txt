@@ -23,12 +23,6 @@ target_link_libraries(${PROJECT_NAME} PRIVATE sfml-graphics sfml-window)
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
 
 # Copy res dir to the binary directory
-add_custom_command(
-        TARGET ${PROJECT_NAME}
-        COMMENT "Copy Res directory"
-        PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/res $<TARGET_FILE_DIR:${PROJECT_NAME}>/res
-        VERBATIM)
-
 if(WIN32)
     add_custom_command(
             TARGET ${PROJECT_NAME}
